@@ -1,0 +1,42 @@
+'BaisFodpleje.Site:Content.Headline':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Headlines
+    icon: icon-header
+    position: 200
+    inlineEditable: true
+  properties:
+    title:
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: '<p>Enter text here...</p>'
+            hyphens: true
+            autoparagraph: true
+            linking:
+              anchor: true
+              title: true
+              relNofollow: true
+              targetBlank: true
+            formatting:
+              strong: true
+              em: true
+              u: true
+              sub: true
+              sup: true
+              del: true
+              p: true
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              h5: true
+              h6: true
+              left: true
+              right: true
+              center: true
+              justify: true
+        options:
+          silhouette: 'codeq.text.title'

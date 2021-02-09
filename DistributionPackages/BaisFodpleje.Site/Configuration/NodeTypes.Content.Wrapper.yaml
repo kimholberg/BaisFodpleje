@@ -1,0 +1,55 @@
+
+'BaisFodpleje.Site:Content.Wrapper':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Wrapper
+    icon: external-link-alt
+    position: 60
+    inlineEditable: true
+    reloadIfChanged: true
+    inspector:
+      groups:
+        section:
+          label: 'Wrapper'
+          icon: external-link-alt
+  properties:
+    wrapper:
+      text:
+      ui:
+        label: 'Select wrapper type'
+        reloadIfChanged: true
+        inspector:
+          group: section
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Vælg wrap type'
+            values:
+              logo-icon:
+                label: 'logo'
+              flower-icon:
+                label: 'flower'
+              lotus-icon:
+                label: 'lotus'
+    Padding:
+      type: string
+      ui:
+        label: 'Indtast padding'
+        inspector:
+          group: section
+    BackGround:
+      text:
+      ui:
+        label: 'Select wrapper type'
+        reloadIfChanged: true
+        inspector:
+          group: section
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Vælg baggrundsfarve'
+            values:
+              grey:
+                label: 'grå'
+              white:
+                label: 'hvid'
+

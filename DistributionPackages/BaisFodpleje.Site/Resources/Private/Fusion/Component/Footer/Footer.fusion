@@ -1,0 +1,87 @@
+prototype(BaisFodpleje.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
+    
+    footerContent = BaisFodpleje.Site:Component.FooterContent
+    
+    @context.node = ${site}
+    
+    year = ${Date.format(Date.now(), 'Y')}
+
+    homeLink = Neos.Neos:NodeUri {
+        node = ${site}
+    }
+
+    languageMenu = Neos.Neos:DimensionsMenu {
+    dimension = 'language'
+    }
+
+    logoUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/img/Baislogo-red-bais.png'
+    }
+
+    avatarUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/img/foedder.png'
+    }
+
+    paymentUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/img/payment-options.png'
+    }
+
+    pinUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/marker.svg'
+    }
+
+    fbUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/facebook.svg'
+    }
+
+    inUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/instagram_white.svg'
+    }
+
+    piUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/pinterest_white.svg'
+    }
+
+    arrowUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/down-arrow-white.svg'
+    }
+
+    renderer = afx`
+        <footer class="footer">{props.footerContent}
+        <div class="footer-content" id="footer-content">
+            <div class="footer-nav">
+                <span>Quick Menu</span>
+                <ul class="navigation-items">
+                    <li class="navigation-item">
+                        <a class="home-link" href={props.homeLink}>Home</a>
+                    </li>
+                </ul>
+                <BaisFodpleje.Site:Component.Navigation startingPoint={site} />
+            </div>
+            <div class="social-cta" id="social-cta">
+                <header>Vi er også på de sociale medier</header>
+                <a href="https://facebook.com/baisfodpleje"><img src={props.fbUri} alt="Facebook icon" width="auto" height="18px" /></a>
+               <!-- > <a href="https://instagram.com/twelve_inch_official/"><img src={props.inUri} alt="Instagram icon" width="auto" height="18px" /></a>
+                <a href="https://www.pinterest.dk/twelveinchofficial/"><img src={props.piUri} alt="Pinterest icon" width="auto" height="18px" /></a> -->
+            </div>
+            <span class="footer-line"></span>
+            <div class="footer-info">
+               <!-- > <a class="logo" href={props.homeLink}>
+                    <img src={props.logoUri} alt="Bais Fodpleje" width="120px" height="auto" />
+                </a> -->
+                <div class="footer-legal">
+                    <div class="copyright" id="copyright">&copy; {props.year} Bais Fodpleje - All rights reserved</div>
+                    <div class="secondary-links">
+                        <a href="/legal">Privacy</a>
+                        <!-- <a href="/B2B">B2B</a>
+                        <a href="https://drive.google.com/drive/folders/0B3EC7YEUb2MnM0oxZjBGdzI0SXM?usp=sharing" target="_blank">Press Kit</a>
+                        <a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="language-selector" id="language-selector" role="button" aria-label="Select language">{props.languageMenu}<img src={props.arrowUri} alt="Marker" width="12" height="12" /></div> -->
+        </div>
+        </footer>
+    `
+
+}

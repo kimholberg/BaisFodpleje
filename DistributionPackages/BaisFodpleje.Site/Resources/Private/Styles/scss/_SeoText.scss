@@ -1,0 +1,53 @@
+.seo-text {
+    margin: 0 auto;
+    padding: $mobile-padding;
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    .seo-headline {
+        font-size: 1.2em;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        p {
+            color: $black;
+            margin-bottom: 15px;
+            @media screen and (min-width: $desktop) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    a {
+        color: $black;
+        display: inline-block;
+        font-weight: 700;
+        font-size: .8rem;
+
+        img {
+            height: 10px;
+            margin-left: 12px;
+            transform: rotate(-90deg);
+            width: 10px;
+        }
+
+        &:after {
+            background-color: $black;
+            content: '';
+            display: block;
+            height: 1px;
+        }
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin: 0 auto;
+        max-width: 980px;
+        padding: $desktop-padding;
+    }
+}

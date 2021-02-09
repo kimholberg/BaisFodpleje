@@ -1,0 +1,7 @@
+'BaisFodpleje.Site:Content.ImageLazy':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Lazy Image
+    icon: icon-picture
+    position: 300

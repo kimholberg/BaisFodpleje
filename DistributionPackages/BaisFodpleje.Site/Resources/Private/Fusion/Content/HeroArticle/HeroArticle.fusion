@@ -1,0 +1,24 @@
+prototype(BaisFodpleje.Site:Content.HeroArticle) < prototype(Neos.Neos:ContentComponent) {
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+    }
+
+    subheadline = Neos.Neos:Editable {
+        property = 'subheadline'
+    }
+
+    renderer = afx`
+    <article class="hero-article">
+        <header>
+            <div class="hero-headline">{props.headline}</div>
+            <div class="hero-subheadline" data-aos="intro" data-aos-delay="200">{props.subheadline}</div>
+        </header>
+        <aside class="">
+            <div class="hero-paragraph">{props.text}</div>
+        </aside>
+    </article>
+    `
+}

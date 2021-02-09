@@ -1,0 +1,20 @@
+
+'BaisFodpleje.Site:Content.Newsletter':
+  superTypes:
+    'Neos.Neos:Content': true
+    'BaisFodpleje.Site:Content.Button': true
+  ui:
+    label: Newsletter Element
+    icon: envelope
+    position: 400
+    inlineEditable: true
+    reloadIfChanged: true
+  properties:
+    text:
+      ui:
+        inline:
+          editorOptions:
+            placeholder: '<p>Enter text here...</p>'
+            hyphens: true
+      options:
+        silhouette: text.free

@@ -1,0 +1,14 @@
+prototype(BaisFodpleje.Site:Content.Wrapper) < prototype(Neos.Neos:ContentComponent) {
+
+        style = ${'padding:' + q(node).property('Padding')} 
+        wrapper = ${'wrapper-' + q(node).property('wrapper')}
+        background = ${'wrapper-ruler-' + q(node).property('BackGround')}
+
+    renderer = afx`
+    <div class="wrapper" style={props.style}>
+         <div class={props.background}>
+             <span class={props.wrapper} />
+        </div>
+    </div>
+    `
+}

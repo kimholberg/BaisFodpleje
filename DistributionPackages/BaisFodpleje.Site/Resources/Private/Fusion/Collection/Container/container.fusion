@@ -1,0 +1,9 @@
+prototype(BaisFodpleje.Site:Collection.Container) < prototype(Neos.Neos:ContentCollection) {
+    tagName = 'div'
+    
+    attributes = Neos.Fusion:DataStructure {
+        class = 'main-container'
+        style = ${'padding:' + q(node).property('containerPadding')}
+    }
+
+}

@@ -1,0 +1,14 @@
+prototype(BaisFodpleje.Site:Collection.Section) < prototype(Neos.Neos:ContentCollection) {
+    tagName = 'section'
+    
+    container = Neos.Neos:ContentCollection {
+        attributes = Neos.Fusion:DataStructure {
+            class = 'container'
+        }
+    }
+    
+    attributes = Neos.Fusion:DataStructure {
+        class = ${'section ' + q(node).property('sectionColor')}
+    }
+
+}

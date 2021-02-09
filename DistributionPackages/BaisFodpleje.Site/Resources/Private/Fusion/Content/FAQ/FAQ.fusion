@@ -1,0 +1,24 @@
+prototype(BaisFodpleje.Site:Content.FAQ) < prototype(Neos.Neos:ContentComponent) {
+
+    answer = Neos.Neos:Editable {
+        property = 'answer'
+    }
+    question = Neos.Neos:Editable {
+        property = 'question'
+    }
+
+    renderer = afx`
+        <article class="faq-content" data-aos="fade-up">
+            <div class="question accordion">
+                    <h2>{props.question}</h2>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+            </div>
+            <div class="answer">
+                <p>{props.answer}</p>
+            </div>
+        </article>
+    `
+}

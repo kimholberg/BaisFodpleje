@@ -1,0 +1,43 @@
+
+'BaisFodpleje.Site:Collection.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+  ui:
+    group: 'structure'
+    label: Section
+    icon: 'square'
+    inlineEditable: true
+    inspector:
+      groups:
+        section:
+          label: 'Section'
+          icon: square
+  constraints:
+    nodeTypes:
+      '*': true
+      'Neos.Neos:Content': true
+  properties:
+    sectionColor:
+      text:
+      ui:
+        label: 'Choose Background Color'
+        reloadIfChanged: true
+        inspector:
+          group: section
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Vælg baggrundsfarve'
+            values:
+              -white:
+                label: 'white'
+              -grey:
+                label: 'grey'
+    bottomPadding:
+      type: boolean
+      ui:
+        label: 'Add bottom padding'
+        reloadIfChanged: true
+        inspector:
+          group: section
+

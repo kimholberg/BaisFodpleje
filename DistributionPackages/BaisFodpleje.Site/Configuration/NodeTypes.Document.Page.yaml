@@ -1,0 +1,12 @@
+'BaisFodpleje.Site:Document.Page':
+  superTypes:
+    'BaisFodpleje.Site:Document.AbstractPage': true
+  ui:
+    label: i18n
+    icon: icon-file-o
+    position: 100
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+    footer:
+      type: 'Neos.Neos:ContentCollection'

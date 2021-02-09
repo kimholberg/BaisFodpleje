@@ -1,0 +1,25 @@
+.twelveinch-text {
+    margin: 0 auto 18px;
+    padding: 0 1.5em;
+    color: #1f1f1f;
+
+    @media screen and (min-width: $desktop) {
+        margin: 0 auto 18px;
+        max-width: 720px;
+        padding: $desktop-padding;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+.text-padding {
+    padding-bottom: 24px;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 0;
+        padding: 2em 2em 2em 0;
+        max-width: 350px;
+    }
+}

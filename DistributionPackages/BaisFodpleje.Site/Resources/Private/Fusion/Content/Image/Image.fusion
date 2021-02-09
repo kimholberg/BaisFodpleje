@@ -1,0 +1,11 @@
+prototype(BaisFodpleje.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
+    alternativeText = ${node.properties.alternativeText}
+    src = BaisFodpleje.Site:Component.ImageUri {
+        @context.asset = ${q(node).property('image')}
+    }
+    shadow = ${q(node).property('imageShadow') ? 'box-shadow: 0 0 6px rgba(39,48,57,.3)' : 'box-shadow: 0 0 0'}
+
+    renderer = afx`
+        <img class="main-image" style={props.shadow} src={props.src} alt={props.alternativeText}/>
+    `
+}

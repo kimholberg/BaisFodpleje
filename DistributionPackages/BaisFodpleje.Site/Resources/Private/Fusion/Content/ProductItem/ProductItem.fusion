@@ -1,0 +1,90 @@
+prototype(BaisFodpleje.Site:Content.ProductItem) < prototype(Neos.Neos:ContentComponent) {
+    lazy = ${q(node).prev().is()}
+
+    src = Neos.Fusion:Case {
+        image {
+            condition = ${q(node).property('image') ? true : false}
+            renderer = Sitegeist.Kaleidoscope:AssetImageSource {
+                asset = ${q(node).property('image')}
+            }
+        }
+        dummyImage {
+            condition = ${site.context.inBackend}
+            renderer = Sitegeist.Kaleidoscope:DummyImageSource
+        }
+    }
+    srchover = Neos.Fusion:Case {
+        image {
+            condition = ${q(node).property('hoverimage') ? true : false}
+            renderer = Sitegeist.Kaleidoscope:AssetImageSource {
+                asset = ${q(node).property('hoverimage')}
+            }
+        }
+        dummyImage {
+            condition = ${site.context.inBackend}
+            renderer = Sitegeist.Kaleidoscope:DummyImageSource
+        }
+    }
+    alternativeText = ${q(node).property('alternativeText')}
+    
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+    }
+    productName = Neos.Neos:Editable {
+        property = 'productName'
+    }
+    productText = Neos.Neos:Editable {
+        property = 'productText'
+    }
+    productLink = Neos.Neos:Editable {
+        property = 'productLink'
+    }
+    chevronUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/down-arrow.svg'
+    }
+    newUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/new_product_green.svg'
+    }
+    saleUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/on_sale.svg'
+    }
+    label = Neos.Neos:Editable {
+        property = 'label'
+    }
+
+    link = ${q(node).property('link')}
+    addTag = ${q(node).property('addTag') ? 'display:block;' : 'display:none;'}
+    addSaleTag = ${q(node).property('addSaleTag') ? 'display:block;' : 'display:none;'}
+
+    renderer = afx`
+        <div class="productItem">
+            <Carbon.Link:Link link={props.link}>
+                <Sitegeist.Lazybones:Image
+                    class="productImageHover"
+                    lazy={true}
+                    lazyWidth={200}
+                    imageSource={props.srchover}
+                    srcset="320w, 400w, 480w, 600w, 640w, 720w, 768w, 800w, 960w, 1024px, 1280w, 1440w, 1600w, 1680w, 1920w, 2560w"
+                    sizes={props.sizes}
+                    alt={props.alternativeText}
+                    />
+                <Sitegeist.Lazybones:Image
+                    class="productImage"
+                    lazy={true}
+                    lazyWidth={200}
+                    imageSource={props.src}
+                    srcset="320w, 400w, 480w, 600w, 640w, 720w, 768w, 800w, 960w, 1024px, 1280w, 1440w, 1600w, 1680w, 1920w, 2560w"
+                    sizes={props.sizes}
+                    alt={props.alternativeText}
+                    />
+            </Carbon.Link:Link>
+            <div class="ProductTag" style={props.addTag}><img src={props.newUri} alt="new product icon" width="40" height="auto"/></div>
+            <div class="ProductTag" style={props.addSaleTag}><img src={props.saleUri} alt="product on sale icon" width="40" height="auto"/></div>
+            <div class="productItemName">{props.productName}</div>
+            <div class="productItemText">{props.productText}</div>
+            <div class="productItemLink">
+                <Carbon.Link:Link link={props.link}>{props.label}</Carbon.Link:Link><img src={props.chevronUri} alt="Follow Link"/>
+            </div>
+        </div>
+    `
+}

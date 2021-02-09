@@ -1,0 +1,56 @@
+.hero-article {
+    display: block;
+    color: $black;
+    padding: $mobile-padding;
+
+    header {
+        display: block;
+        line-height: 1.2;
+        overflow: hidden;
+
+        .hero-headline {
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 900;
+            }
+        }
+
+        .hero-subheadline {
+            margin-bottom: 20px;
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 900;
+            }
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: $desktop-padding;
+
+        header {
+            max-width: 50%;
+            margin-right: 5em;
+
+            .hero-headline {
+                margin-bottom: 40px;
+
+                h2 {
+                    font-size: 4vw;
+                }
+            }
+        }
+
+        aside {
+            color: $black-lighter;
+            width: 720px;
+        }
+    }
+}

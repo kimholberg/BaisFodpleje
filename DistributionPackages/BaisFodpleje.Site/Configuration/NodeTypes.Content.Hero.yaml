@@ -1,0 +1,81 @@
+
+'BaisFodpleje.Site:Content.Hero':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Hero Image'
+    icon: icon-picture
+    position: 250
+    reloadIfChanged: true
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          icon: icon-image
+  properties:
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        inspector:
+          group: image
+    alternativeText:
+      type: string
+      ui:
+        label: 'Alternative Text'
+        inspector:
+          group: image
+    text:
+      ui:
+        inline:
+          editorOptions:
+            placeholder: '<h1>Enter text here...</h1>'
+            hyphens: true
+            linking:
+              anchor: true
+              title: true
+              relNofollow: true
+              targetBlank: true
+            formatting:
+              strong: true
+              em: true
+              u: true
+              sub: true
+              sup: true
+              del: true
+              p: true
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              h5: true
+              h6: true
+              pre: true
+              underline: true
+              strikethrough: true
+              removeFormat: true
+              left: true
+              right: true
+              center: true
+              justify: true
+              table: true
+              ol: true
+              ul: true
+              a: true
+      options:
+        silhouette: text.free
+    label:
+      ui:
+        inline:
+          editorOptions:
+            placeholder: '<h1>Enter text here...</h1>'
+            hyphens: true
+      options:
+        silhouette: text.free
+    link:
+      type: string
+      ui:
+        label: 'Link target'
+        inspector:
+          group: image
+          editor: Neos.Neos/Inspector/Editors/LinkEditor

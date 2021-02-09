@@ -1,0 +1,28 @@
+.section {
+    //padding: 4em 0;
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+        //max-width: 1400px;
+        margin: 0 auto;
+        //padding: 1.5em 1.5em;
+        padding-bottom: 0;
+    }
+}
+
+.-grey {
+    background-color: #f3f4f6;
+}
+
+.-white {
+    background-color: white;
+}
+
+.-red {
+    background-color: red;
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: 1400px;
+}

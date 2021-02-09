@@ -1,0 +1,34 @@
+
+'BaisFodpleje.Site:Content.HeroArticle':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Hero Article
+    icon: icon-file-text
+    position: 251
+    inlineEditable: true
+  properties:
+    text:
+      ui:
+        inline:
+          editorOptions:
+            placeholder: '<p>Enter text here...</p>'
+            hyphens: true
+      options:
+        silhouette: text.free
+    headline:
+      ui:
+        inline:
+          editorOptions:
+            placeholder: '<h2>Enter headline here...</h2>'
+            hyphens: true
+      options:
+        silhouette: text.free
+    subheadline:
+      ui:
+        inline:
+          editorOptions:
+            placeholder: '<h3>Enter sub headline here...</h3>'
+            hyphens: true
+      options:
+        silhouette: text.free

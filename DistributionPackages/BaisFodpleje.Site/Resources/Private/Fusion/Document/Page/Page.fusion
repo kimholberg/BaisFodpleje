@@ -1,0 +1,16 @@
+prototype(BaisFodpleje.Site:Document.Page) < prototype(BaisFodpleje.Site:Document.AbstractPage) {
+
+    body.content = Neos.Fusion:Component {
+        main = Neos.Neos:ContentCollection {
+            nodePath = 'main'
+        }
+        footer = BaisFodpleje.Site:Component.Footer
+
+        renderer = afx`
+        <main class="main has-navbar-fixed-top" onclick="closemenuFunction()">
+            {props.main}
+        </main>
+            {props.footer}
+        `
+    }
+}

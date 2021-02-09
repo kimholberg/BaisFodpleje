@@ -1,0 +1,18 @@
+prototype(BaisFodpleje.Site:Content.SeoText) < prototype(Neos.Neos:ContentComponent) {
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+    }
+    arrowUri = Neos.Fusion:ResourceUri {
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/down-arrow.svg'
+    }
+
+    renderer = afx`
+        <article class="seo-text">
+            <header class="seo-headline">{props.headline}</header>
+            <div class="seo-paragraph">{props.text}</div>
+        </article>
+    `
+}

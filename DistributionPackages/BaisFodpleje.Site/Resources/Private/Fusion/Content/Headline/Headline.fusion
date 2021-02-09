@@ -1,0 +1,11 @@
+prototype(BaisFodpleje.Site:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+
+    renderer = afx`
+    <div class="headline-div">
+        <div class="headline" data-aos="intro" data-aos-delay="400">{props.title}</div>
+    </div>
+    `
+}

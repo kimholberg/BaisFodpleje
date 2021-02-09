@@ -1,0 +1,105 @@
+@keyframes wiggle {
+    0% {transform: translateX(0px)}
+    25% {transform: translateX(2px)}
+    50% {transform: translateX(0px)}
+    75% {transform: translateX(-2px)}
+}
+
+.resource {
+    display: block;
+    position: relative;
+    margin-bottom: .5em;
+
+    a {
+        display: block;
+        height: 100%;
+        line-height: 0;
+        width: 100%;
+    }
+
+    .resource-content {
+        display: block;
+        margin: 2em 0 2.5em;
+        overflow: hidden;
+        padding: $mobile-padding;
+
+        header {
+            display: block;
+            font-weight: 900;
+            font-size: 1.5em;
+        }
+
+        .resource-link {
+            align-items: center;
+            border-bottom: 2px transparent solid;
+            color: $black;
+            display: inline-flex;
+            font-weight: 500;
+
+            p {
+                margin-right: 6px;
+            }
+
+            img {
+                display: block;
+                height: 12px;
+                transform: rotate(-90deg);
+                width: 12px;
+            }
+
+            .white-arrow {
+                display: none;
+            }
+
+            &:hover {
+                border-bottom: 2px $black solid;
+            }
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        .resource-content {
+            bottom: 40px;
+            left: 40px;
+            line-height: 1.2;
+            margin: 0;
+            padding: 20px;
+            position: absolute;
+
+            header {
+                color: white;
+                font-size: 3em;
+                text-transform: uppercase;
+                text-shadow: 0 0 20px #07070778;
+            }
+
+            .resource-link {
+                color: white;
+                padding: 6px 0;
+                text-shadow: 0 0 20px #07070778;
+
+                p {
+                    font-size: 1.5em;
+                }
+
+                .black-arrow {
+                    display: none;
+                }
+
+                .white-arrow {
+                    display: block;
+                }
+
+                &:hover {
+                    border-bottom: 2px white solid;
+                }
+            }
+        }
+
+        /*&:hover {
+            .resource-content {
+                animation: wiggle .1s ease-in-out;
+            }
+        }*/
+    }
+}
