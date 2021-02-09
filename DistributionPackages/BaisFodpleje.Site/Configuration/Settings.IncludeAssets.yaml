@@ -13,7 +13,7 @@ Carbon:
         # Asset files who get's loaded in live and backend view
         General:
           Head:
-            - head.css
+            - head.css[inline]
             - aos.css[async rel="preload"]
             - main.css[async rel="preload"]
             - flickity.css[async rel="preload"]
