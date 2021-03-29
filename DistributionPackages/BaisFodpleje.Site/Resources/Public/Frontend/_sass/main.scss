@@ -79,7 +79,7 @@ main {
 }
 
 a {
-    color: $green;
+    color: rgba(6, 65, 110, 1.0);
 }
 
 a:hover {
@@ -89,7 +89,7 @@ a:hover {
 .footer {background-color: white;
 }
 .navigation .navigation-bar {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(6, 65, 110, 0.8);
 }
 .navigation .navigation-bar .bar .logo img {
     display: block;

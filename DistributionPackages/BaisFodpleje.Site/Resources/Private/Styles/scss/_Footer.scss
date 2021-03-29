@@ -89,7 +89,7 @@ footer {
                 .navigation-item {
                     a{
                         font-weight: 700;
-                        color: $green;
+                        color: rgba(6, 65, 110, 1.0);
                         font-size: 1.5em;
 
                         &:hover {
@@ -112,7 +112,7 @@ footer {
                 font-size: 10px;
 
                 a {
-                    color: $green;
+                    color: rgba(6, 65, 110, 1.0);
                     text-decoration: underline;
                     margin-right: 12px;
 
@@ -217,7 +217,7 @@ footer {
             .footer-line {
                 display: block;
                 height: 1px;
-                background-color: $green;
+                background-color: rgba(6, 65, 110, 1.0);
                 flex-basis: calc(100% - 2em);
                 margin: 0 auto;
             }
