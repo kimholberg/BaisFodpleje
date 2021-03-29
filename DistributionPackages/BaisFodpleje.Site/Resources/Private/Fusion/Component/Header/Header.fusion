@@ -6,7 +6,7 @@ prototype(BaisFodpleje.Site:Component.Header) < prototype(Neos.Fusion:Component)
         node = ${site}
     }
     logoUri = Neos.Fusion:ResourceUri {
-    path = 'resource://BaisFodpleje.Site/Public/Frontend/img/BaisTopLogo-green.png'
+    path = 'resource://BaisFodpleje.Site/Public/Frontend/img/bai-logo-gold-600x100.png'
     }
     bagUri = Neos.Fusion:ResourceUri {
     path = 'resource://BaisFodpleje.Site/Public/Frontend/svg/shopping-bag.svg'
