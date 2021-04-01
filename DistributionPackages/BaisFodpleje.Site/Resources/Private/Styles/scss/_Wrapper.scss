@@ -4,10 +4,13 @@
 .wrapper-lotus-icon:before {
     content: url("/_Resources/Static/Packages/BaisFodpleje.Site/Frontend/img/lotus.png");
 }
+.wrapper-fod-icon:before {
+    content: url("/_Resources/Static/Packages/BaisFodpleje.Site/Frontend/img/fod.jpeg");
+}
 
 .wrapper-ruler-grey {
 position: relative;
-z-index: 999;
+z-index: 20;
 margin-left: auto;
 margin-right: auto;
 margin-top: -18px;
@@ -55,5 +58,5 @@ margin-top: -20px;
 margin-left: auto;
 margin-right: auto;
 background: rgba(39,48,57,0.15);
-z-index: 99;
+z-index: 10;
 }
