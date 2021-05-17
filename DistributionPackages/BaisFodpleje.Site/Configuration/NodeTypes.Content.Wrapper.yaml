@@ -31,8 +31,6 @@
                 label: 'flower'
               lotus-icon:
                 label: 'lotus'
-              fod-icon:
-                label: 'fod'
     Padding:
       type: string
       ui:
